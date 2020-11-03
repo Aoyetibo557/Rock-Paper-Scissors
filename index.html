@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>ROCK, PAPER, SCISSORS</title>
+</head>
+<body>
+    <header>
+        <a class="_game_logo" href="./index.html">RPS_Game</a>
+        <nav>
+            <ul class="_game_ul">
+                <li><a href="./index.html">Play Game</a></li>
+                <li><a href="./rules.html">How To Play</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <section class="_game_section">
+        <div class="_player_data">
+           <div>
+                <h5>ROCK</h5>
+                <h5>PAPER</h5>
+                <h5>SCISSORS</h5>
+           </div>
+           <div class="_moves">
+               <h5>MOVES LEFT</h5>
+               <p id="mvs">5</p>
+           </div>
+            <div class="_score_box">
+                <p id="scoreId">SCORE</p>
+                <p id="playerScore">0</p>
+                <!-- <p id="houseScore"></p> -->
+            </div>
+        </div>
+    
+        <div class="_game_btns">
+            <button id="rock" aria-label="rock" value="rock" onclick="getPlayerMove(this.value); playGame();" ><i class="fas fa-hand-rock"></i></button>
+            <button id="paper" aria-label="paper" value="paper" onclick="getPlayerMove(this.value); playGame();"><i class="fas fa-hand-paper"></i></button>
+            <button id="sis" aria-label="scissors" value= "scissors" onclick="getPlayerMove(this.value); playGame();"><i class="fas fa-hand-scissors"></i></button>
+    
+            <!-- <button id="rock" aria-label="rock" value="rock" onclick="getPlayerMove(this.value); playGame();">ROCK</button> -->
+            <!-- <button id="paper" aria-label="paper" value="paper" onclick="getPlayerMove(this.value); playGame();">PAPER</button> -->
+            <!-- <button id="sis" aria-label="scissors" value= "scissors" onclick="getPlayerMove(this.value); playGame();">SCISSORS</button> -->
+        </div>
+    
+        <div id="gameResult" class="hide  _game_result">
+            <div>
+                <p>YOU PICKED</p>
+                <p id="playerChoice" class="box"></p>
+            </div>
+            <div >
+                <p id="status">You win</p>
+                <a href="./index.html" class="alt_btn">PLAY AGAIN</a>
+            </div>
+            <div>
+                <p>THE HOUSE PICKED</p>
+                <p id="houseChoice"></p>
+            </div>
+        </div>
+    </section>
+   
+
+    <script src="script.js"></script>
+</body>
+</html>
